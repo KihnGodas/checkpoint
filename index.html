@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        
+    </div>
+    <script>
+        const arr=[
+            {
+                img:"",
+                name:"cá",
+                price:40
+            }
+            ,{
+                img:"",
+                name:"gà",
+                price:65
+            }
+            ,{
+                img:"",
+                name:"lợn",
+                price:20
+            }
+            ,{
+                img:"",
+                name:"chó",
+                price:100
+            }
+            
+        ]
+        //bài 1
+        function showMain(){
+            let main = document.querySelector(".main");
+            if(main){
+                for(let  i of arr){
+                    main.innerHTML +=`<img src="${i.img}" alt="">
+                                <p>Giá tiền:${i.price}$</p>
+                                <p>Tên món ăn: ${i.name}</p>
+                                <br>`
+                }
+            }
+        }
+        showMain()
+        // bài 2
+        let giaTien = 0;
+        for(let a of arr){
+            giaTien = giaTien + a.price;
+        }
+        document.write("Tổng giá tiền: ",giaTien);
+
+    </script>
+</body>
+</html>
